@@ -1,0 +1,7 @@
+#这是常用命令，备忘
+docker build -t vnc-step1 -f step1 .
+
+
+#后台构建
+nohup docker build -t ubuntu-xfce-vnc . > build_output.log 2>&1 &
+tail -f build_output.log

@@ -1,12 +1,15 @@
 version: "3"
 
 services:
-  ubuntu-desktop:
-    image: gotoeasy/ubuntu-desktop
+  ubuntu-desktop-k:
+    image: ubuntu-xfce-vnc:latest
+    container_name: ubuntu-xfce-vnc
     ports:
-      - "22:22"
-      - "5900:5900"
-      - "13389:3389"
+      - "11022:22"
+      - "16900:5900"
+      - "14389:3389"
     environment:
       SIZE: 1600x840
-      PASSWD: 123456
+      PASSWD: "123456"
+    volumes:
+      - /volume3/docker/ubuntu-xfce-vnc/share:/home/kelvin/share
