@@ -14,8 +14,8 @@ sudo vi /usr/share/applications/code.desktop
 
 目前还存在的问题，不能通过公网ssh到这个docker，不清楚是群晖dsm7.2的问题，还是容器设置的问题
 
+1.问题解决：
 docker运行Ubuntu，并通过vnc连接，打开web browser提示：failed to execute default web browser input/output error. 是哪里的权限设置有问题吗，我不是用root账号登录的，是用普通用户
-
 先把.config 目录chmod 给普通用户
 
 创建一个包装脚本（wrapper script）然后将这个脚本作为默认浏览器。
